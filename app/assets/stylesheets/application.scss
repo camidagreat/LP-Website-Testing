@@ -1,0 +1,294 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+nav.navbar.navbar-default {
+  margin-bottom: 0;
+}
+
+.navbar-form {
+  display: block;
+  float: right;
+  @media only screen and (min-width: 768px) {
+    display: block;
+    float: right;
+  }
+}
+
+.customHr {
+  display: inline-block;
+  margin: 6rem 10rem;
+  width: 80%;
+  border: 1px solid silver;
+}
+
+.customUL {
+  width: 10%;
+  border: 1px solid silver;
+  margin: 2rem auto 4rem;
+ }
+
+.logo {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.lp-jumbotron {
+  height: 100vh;
+  width: auto;
+  background-image: url('full-grid.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  h1 {
+    padding-top: 14rem;
+  }
+  h1, p {
+    color: white;
+  }
+  button {
+    width: 250px;
+    height: auto;
+  }
+}
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: relative;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(.7);
+    transform: translateZ(90px) scale(.7);
+    z-index: -3;
+  }
+
+  .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 0;
+  }
+
+  .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: -1;
+  }
+
+  .parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: -2;
+  }
+
+.content {
+  background-color: white;
+}
+//
+// #particles-js {
+//   background-image: url('energy-grid.png');
+//   background-size: 115% 115%;
+//   background-position: center;
+//   margin-bottom: 4rem;
+//   cursor: pointer;
+// }
+//
+// .website-header {
+//   .name-logo {
+//   }
+//   @media only screen and (min-width: 845px) {
+//     padding: 10rem;
+//     align-content: center;
+//     display: block;
+//     margin: auto;
+//     .user-dash-link {
+//       padding-top: 3rem;
+//     }
+//   }
+//   @media only screen and (max-width: 799px) {
+//   }
+// }
+
+.mission-box {
+  margin: auto;
+  padding: 4rem;
+  @media only screen and (max-width: 640px) {
+    h1 {
+      margin-bottom: 2rem;
+    }
+    img {
+      padding: 0;
+      margin: 0;
+    }
+  }
+  .mission {
+    max-width: 480px;
+  }
+  .mission-pic {
+    img {
+      width: 50rem;
+      float: right;
+      padding: 4rem;
+    }
+  }
+}
+
+.explainer {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 4rem;
+}
+
+.explainer-box {
+  background-color: white;
+  img {
+    height: 200px;
+    display: block;
+    margin: auto;
+    color: green;
+    animation-duration: 1s;
+    animation-name: slidein;
+    animation-delay: 2s;
+  }
+  h3{
+    margin-bottom: 2rem;
+  }
+  p {
+    margin: auto;
+    max-width: 350px;
+  }
+  @media only screen and (max-width: 640px) {
+    img {
+      height: 120px;
+      display: block;
+      margin: auto;
+    }
+    h3{
+      margin-bottom: 0;
+    }
+    p {
+      margin: auto;
+      max-width: 400px;
+    }
+  }
+}
+
+.background-solar-panels {
+  background-image: url('solar-roof.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.team {
+  padding-top: 3rem;
+  background-color: white;
+  .team-pics {
+    max-width: 700px;
+    display: block;
+    margin: auto;
+
+  }
+  @media only screen and (min-width: 640px) {
+    .team-pics {
+      float: right;
+    }
+    .img-down {
+      top: 75px;
+    }
+    .img-down-more {
+      top: 150px;
+    }
+  }
+  h1 {
+    padding-top: 8rem;
+  }
+  p {
+    margin: 0 2rem 4rem;
+  }
+  img {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 180px;
+    height: 180px;
+    border-radius: 100px;
+    &:hover {
+      height: 200px;
+      width: 200px;
+      margin-bottom: 0;
+      cursor: pointer;
+    }
+    @media only screen and (max-width: 640px) {
+      margin: auto;
+      height: 120px;
+      width: 120px;
+      &:hover {
+        height: 130px;
+        width: 130px;
+        margin-bottom: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.email-list {
+  display: block;
+  background-image: url();
+  align-items: baseline;
+  .email-list-signup {
+    margin: auto;
+    display: inline-block;
+  }
+  .form-control {
+    max-width: 400px;
+    margin: auto;
+    display: inline-block;
+  }
+}
+
+// Animations
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 200px;
+  }
+
+  to {
+    margin-left: 25%;
+    width: 200px;
+  }
+}
