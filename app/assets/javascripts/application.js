@@ -65,24 +65,17 @@ $(function () {
   })
 })
 
-$(function () {
-  $('#jackie').popover({
-    html: true,
-    trigger: 'hover',
-    placement: 'top',
-    content: function () {
-      return 'Jackie is a knowledge vortex. In the swirling mist of her mind lives a solution for every problem the world faces.';
-    }
-  })
-})
 
-$(function () {
-  $('#ty').popover({
-    html: true,
-    trigger: 'hover',
-    placement: 'top',
-    content: function () {
-      return 'No one knows what Ty does. But ask him for the world and he will give you a universe.';
-    }
-  })
-})
+$(window).scroll(function () {
+    $('.willAnimate').each(function () {
+        var imagePos = $(this).offset().top;
+        var imageHeight = $(this).height();
+        var topOfWindow = $(window).scrollTop();
+
+        if (imagePos < topOfWindow + imageHeight && imagePos + imageHeight > topOfWindow) {
+            $(this).toggleClass('animated');
+        } else {
+            $(this).toggleClass('animated');
+        }
+    });
+});

@@ -11,4 +11,10 @@ class StaticPagesController < ApplicationController
   def about
   end
 
+  def grid
+  end
+
+  def energy_user
+  end
+  
 end

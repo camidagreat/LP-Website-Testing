@@ -27,8 +27,8 @@ nav.navbar.navbar-default {
 
 .customHr {
   display: inline-block;
-  margin: 6rem 10rem;
-  width: 80%;
+  margin: auto;
+  width: 100%;
   border: 1px solid silver;
 }
 
@@ -73,7 +73,7 @@ nav.navbar.navbar-default {
 
   .parallax__group {
     position: relative;
-    height: 100vh;
+    height: auto;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
   }
@@ -141,24 +141,33 @@ nav.navbar.navbar-default {
 
 .mission-box {
   margin: auto;
-  padding: 4rem;
-  @media only screen and (max-width: 640px) {
+  padding: 4rem 8rem;
+  @media only screen and (max-width: 638px) {
     h1 {
       margin-bottom: 2rem;
     }
     img {
       padding: 0;
       margin: 0;
+      width: 300px;
+    }
+    .mission {
+      max-width: 350px;
+      margin: auto;
     }
   }
-  .mission {
-    max-width: 480px;
-  }
-  .mission-pic {
+  @media only screen and (min-width: 638px) {
+    h1 {
+      margin-bottom: 2rem;
+    }
     img {
-      width: 50rem;
+      width: 600px;
       float: right;
       padding: 4rem;
+    }
+    .mission {
+      width: 350px;
+      margin: auto;
     }
   }
 }
@@ -166,7 +175,7 @@ nav.navbar.navbar-default {
 .explainer {
   width: 100%;
   margin: auto;
-  padding-bottom: 4rem;
+  padding: 4rem 4rem 6rem;
 }
 
 .explainer-box {
@@ -176,9 +185,6 @@ nav.navbar.navbar-default {
     display: block;
     margin: auto;
     color: green;
-    animation-duration: 1s;
-    animation-name: slidein;
-    animation-delay: 2s;
   }
   h3{
     margin-bottom: 2rem;
@@ -187,7 +193,7 @@ nav.navbar.navbar-default {
     margin: auto;
     max-width: 350px;
   }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 638px) {
     img {
       height: 120px;
       display: block;
@@ -205,7 +211,7 @@ nav.navbar.navbar-default {
 
 .background-solar-panels {
   background-image: url('solar-roof.jpg');
-  height: 100%;
+  height: 60%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,15 +227,12 @@ nav.navbar.navbar-default {
     margin: auto;
 
   }
-  @media only screen and (min-width: 640px) {
+  @media only screen and (min-width: 638px) {
     .team-pics {
       float: right;
     }
     .img-down {
       top: 75px;
-    }
-    .img-down-more {
-      top: 150px;
     }
   }
   h1 {
@@ -250,36 +253,112 @@ nav.navbar.navbar-default {
       margin-bottom: 0;
       cursor: pointer;
     }
-    @media only screen and (max-width: 640px) {
-      margin: auto;
+    @media only screen and (max-width: 638px) {
+      margin: auto auto 10px 10px;
       height: 120px;
       width: 120px;
       &:hover {
         height: 130px;
         width: 130px;
-        margin-bottom: 0;
+        margin: auto;
         cursor: pointer;
       }
     }
   }
 }
 
-.email-list {
-  display: block;
-  background-image: url();
-  align-items: baseline;
-  .email-list-signup {
-    margin: auto;
-    display: inline-block;
+.footer {
+  position: relative;
+  margin-top: 10rem;
+  width: 100%;
+  height: 33rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('full-grid.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  @media only screen and (max-width: 638px) {
   }
-  .form-control {
-    max-width: 400px;
-    margin: auto;
-    display: inline-block;
+  .title-spacer {
+    margin-bottom: 4rem;
+  }
+  .email-LP {
+    &:hover {
+      cursor: pointer;
+      color: green;
+    }
+  }
+  .website-links {
+    text-decoration: none;
+    color: #a8a36b;
+    &:hover {
+      cursor: pointer;
+      color: green;
+    }
+  }
+  p {
+    color: #a8a36b
+  }
+  .footer-contact {
+    margin-bottom: 2rem;
   }
 }
 
+.explainer-title {
+  padding: 3rem 4rem;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.grid-explainer {
+  .lp-1, .lp-2, .lp-3 {
+    min-width: 65%;
+    height: 55%;
+
+  }
+  .lp-2 {
+    float: right;
+  }
+  .column {
+    clear: both;
+  }
+  .lilypad-box {
+    position: relative;
+    float: left;
+    display: inline-block;
+  }
+  .lilypad-clipart {
+    width: 200px;
+    display: inline-block;
+    padding-top: 3rem;
+    margin: auto;
+  }
+  .explainer-1, .explainer-2, .explainer-3 {
+    max-width: 400px;
+    display: inline-block;
+    margin: 3rem;
+  }
+  .lilypad-number {
+    left: 0;
+    position:absolute;
+    text-align:center;
+    top: 30px;
+    width: 100%;
+    margin-top: 6rem;
+    font-size: 40px;
+  }
+}
 // Animations
+
+.delay-animation {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.animated {
+  visibility: visible;
+}
 
 @keyframes slidein {
   from {

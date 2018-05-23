@@ -1,12 +1,14 @@
 <div class="parallax">
 
   <div class="parallax__group">
-    <div class="parallax__layer parallax__layer--back lp-jumbotron">
-      <div class="jumbotron-text">
-        <h1 class="title text-center">Lilypad Energy</h1>
-        <p class="lead text-center"> A New Interface For The Energy Economy </p>
-        <div class="text-center">
-          <button type="button" href="https://lilypad.energy/client-login" class="btn btn-primary">Go To Customer Portal</button>
+    <div class="row">
+      <div class="parallax__layer parallax__layer--back lp-jumbotron">
+        <div class="jumbotron-text delay-animation animated fadeInUp">
+          <h1 class="title text-center">Lilypad Energy</h1>
+          <p class="lead text-center"> A New Interface For The Energy Economy </p>
+          <div class="text-center">
+            <button type="button" href="https://lilypad.energy/client-login" class="btn btn-primary">Go To Customer Portal</button>
+          </div>
         </div>
       </div>
     </div>
@@ -14,8 +16,9 @@
 
   <div class="parallax__group">
     <div class="parallax__layer parallax__layer--base content">
-      <div class="mission-box text-center">
-        <div class="mission col-sm-4 text-center pull-left">
+
+      <div class="mission-box text-center row">
+        <div class="mission text-center pull-left hidden-element willAnimate slideInLeft">
           <h1 class="text-center display-4">Mission</h1>
           <div class="customUL"></div>
           <p class="lead text-center">
@@ -24,55 +27,56 @@
             By using the Lilypad's software, home owners have that same opportunity.
           </p>
         </div>
-        <div class="col-sm-8 mission-pic">
-          <%= image_tag('LP-platform.png') %>
+        <div class="mission-pic">
+          <%= image_tag('LP-platform.png', :class => 'img-fluid') %>
         </div>
       </div>
-    </div>
 
-    <div class="content">
-      <div class="customHr parallax__layer parallax__layer--base"></div>
-    </div>
+      <div class="row">
+        <div class="customHr text-center"></div>
+      </div>
 
-    <div class="parallax__layer parallax__layer--base content text-center">
-      <div class="explainer col-xs-12 content">
-        <h1 class="text-center display-4">How It Works</h1>
-        <div class="customUL"></div>
+      <div class="content text-center">
+        <div class="explainer row">
+          <h1 class="text-center display-4">How It Works</h1>
+          <div class="customUL"></div>
 
-        <div class="col-sm-4 explainer-box">
-          <%=image_tag('lightblub.png') %>
-          <h3 class="text-center">You and The Grid</h3>
-          <p class="text-center">Modern America understands our grid to be a one-way street: power
-                          goes to a home, gets used and gets paid off on your utility bills.
-                          Lilypad enables money to flow in both directions by letting users
-                          work with the grid to help balance load.
-          </p>
-        </div>
-        <div class="col-sm-4 explainer-box">
-          <%=image_tag('battery.png') %>
-          <h3 class="text-center">Rebalancing</h3>
-          <p class="text-center">The grid has a finite amount of power and can reach capacity at times.
-                          This is where you come in. Whether you have a backup power cell, a set
-                          of solar panels, or you're okay turning off your AC for an hour, Lilypad
-                          lets you know when you can help the grid and make money doing it.
-          </p>
-        </div>
-        <div class="col-sm-4 explainer-box">
-          <%=image_tag('plug.png') %>
-          <h3 class="text-center">Saving is earning</h3>
-          <p class="text-center">All you have to do is find and select the partner program(s) you would
-                          like to enroll in. Lilypad takes care of the rest, ultimately sending you,
-                          the homeowner, checks for your help supporting the grid.
-          </p>
+          <div class="col-sm-4 explainer-box">
+            <%=image_tag('lightblub.png') %>
+            <h3 class="text-center animated slideInRight">You and The Grid</h3>
+            <p class="text-center">Modern America understands our grid to be a one-way street: power
+                            goes to a home, gets used and gets paid off on your utility bills.
+                            Lilypad enables money to flow in both directions by letting users
+                            work with the grid to help balance load.
+            </p>
+          </div>
+          <div class="col-sm-4 explainer-box">
+            <%=image_tag('battery.png') %>
+            <h3 class="text-center animated slideInRight">Rebalancing</h3>
+            <p class="text-center">The grid has a finite amount of power and can reach capacity at times.
+                            This is where you come in. Whether you have a backup power cell, a set
+                            of solar panels, or you're okay turning off your AC for an hour, Lilypad
+                            lets you know when you can help the grid and make money doing it.
+            </p>
+          </div>
+          <div class="col-sm-4 explainer-box">
+            <%=image_tag('plug.png') %>
+            <h3 class="text-center animated slideInRight">Saving is earning</h3>
+            <p class="text-center">All you have to do is find and select the partner program(s) you would
+                            like to enroll in. Lilypad takes care of the rest, ultimately sending you,
+                            the homeowner, checks for your help supporting the grid.
+            </p>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 
   <div class="background-solar-panels"></div>
 
   <div class="parallax__group">
-    <div class="parallax__layer parallax__layer--base team content col-xs-12">
+    <div class="parallax__layer parallax__layer--base team content row">
       <div class="col-sm-4">
         <h1 class="text-center display-4">Our Team</h1>
         <div class="customUL"></div>
@@ -92,30 +96,9 @@
           <img src="/assets/team-pics/sam.jpg" id='sam' data-toggle="popover" title="Sam Bailly" />
           <img src="/assets/team-pics/luke.jpg" id='luke' data-toggle="popover" title="Luke Bidigare-Curtis" />
         </div>
-        <div class="col-sm-4 img-down-more">
-          <img src="/assets/team-pics/jackie.png" id='jackie' data-toggle="popover" title="Jackqueline Garrahan" />
-          <img src="/assets/team-pics/ty.jpeg" id='ty' data-toggle="popover" title="Tyler Lance West" />
-        </div>
       </div>
     </div>
   </div>
 
-
-  <div class="parallax__group">
-    <div class="parallax__layer--base">
-      <div class="email-list col-xs-12">
-        <div class="sustainable-leaf pull-left col-sm-3 col-">
-          <%= image_tag('sustainable-leaf.png') %>
-        </div>
-        <div class="col-sm-9 text-center email-list-signup">
-          <h2>Subscribe</h2>
-          <p>Sign up to be a part of the Lilypad community</p>
-          <%= form_tag do %>
-            <%= text_field_tag(:email, '', :placeholder => "Email address" , :class => 'form-control') %>
-            <%= submit_tag("Sign up", :class => 'btn btn-primary') %>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
+    <%= render 'footer' %>
 </div>
